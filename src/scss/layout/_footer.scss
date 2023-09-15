@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer__flex {
+        width: 90%;
+        h2 {
+            text-align: center;
+            color: v.$amarillo;
+            background-color: v.$negro;
+            width: fit-content;
+            margin: 5rem auto;
+            padding: .8rem 2rem;
+        }
+        .footer__contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5rem 0;
+
+            a, p {
+                margin: 2rem 1rem;
+            }
+            a {
+                transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            a:nth-child(1) svg:hover {
+                fill: v.$azul;
+            }
+            a:nth-child(2) svg:hover {
+                fill: lightgreen;
+            }
+            p {
+                font-weight: 500;
+                font-size: 2.5rem;
+            }
+
+        }
+    }
+}

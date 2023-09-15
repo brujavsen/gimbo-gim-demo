@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.header {
+    background: url('/public/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    height: 900px;
+
+    @include m.tablet {
+        height: 700px;
+    }
+
+    .header__cnt {
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(3px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .header__image {
+            @include m.tablet {
+                align-self: baseline;
+            }
+            align-self: center;
+            margin: 50px 10px;
+            img {
+                width: 150px;
+            }
+        }
+        .header__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                color: v.$blanco;
+                font-size: 8rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            p {
+                color: v.$amarillo;
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            button {
+                background-color: v.$amarillo;
+                padding: 1.5rem 2.5rem;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.offered {
+    margin: 3rem;
+    margin-bottom: 30rem;
+    .offered__cnt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            text-transform: uppercase;
+            margin-top: 50px;
+            font-size: 5rem;
+            color: v.$blanco;
+            background-color: v.$azul;
+            padding: .8rem 5rem;
+            text-align: center;
+        }
+
+        hr {
+            border: 3px dashed v.$azul;
+            width: 60%;
+            margin: 10rem 0;
+        }
+
+        .offered__flex {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            gap: 5rem;
+            margin: 5rem 0;
+            
+            @include m.desktop {
+                gap: 10rem;
+                flex-direction: row;
+            }
+
+            .flex__child {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h3 {
+                    text-align: center;
+                    color: v.$azul;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        .offered_service {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5rem;
+            width: 80%;
+            @include m.desktop {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .section {
+                h3 {
+                    text-align: center;
+                    font-size: 4rem;
+                    color: v.$blanco;
+                    background-color: v.$azul;
+                    padding: .8rem 5rem;
+                }
+                p {
+                    font-weight: 600;
+                    color: v.$azul;
+                    font-size: 3rem;
+                }
+                ul {
+                    margin: 3rem 0;
+                    line-height: 2;
+                    font-size: 2.5rem;
+                    
+                    li > span {
+                        font-weight: 600;
+                        color: v.$azul;
+                    }
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.hero {
+    background-image: url('/hero-2.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+
+    @include m.desktopXL {
+        height: 500px;
+    }
+
+    .hero__flex {
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+
+        @include m.desktopXL {
+            flex-direction: row;
+        }
+
+        .hero__info {
+            color: v.$blanco;
+            text-align: center;
+            h2 {
+                background-color: v.$azul;
+                padding: .8rem 5rem;
+            }
+        }
+    }
+}
