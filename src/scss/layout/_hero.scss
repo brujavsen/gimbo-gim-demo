@@ -30,8 +30,12 @@
             color: v.$blanco;
             text-align: center;
             h2 {
+                font-size: 3rem;
                 background-color: v.$azul;
                 padding: .8rem 5rem;
+            }
+            p {
+                font-size: 1.8rem;
             }
         }
     }
