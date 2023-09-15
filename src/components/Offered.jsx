@@ -41,7 +41,10 @@ const Offered = () => {
                             <li>19:00 hs (Niños/as)</li>
                             <li>20:00 hs (Adolescentes y adultos)</li>
                         </ul>
-                        <img src="/karate.jpg" alt="sala-de-aparatos image" />
+                        <div className="section__images">
+                            <img src="/karate.jpg" alt="karate image" />
+                            <img src="/karate-2.jpg" alt="karate2 image" />
+                        </div>
                     </div>
                 </div>
             </div>

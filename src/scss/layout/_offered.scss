@@ -64,6 +64,7 @@
                 align-items: flex-start;
             }
             .section {
+                width: 100%;
                 h3 {
                     text-align: center;
                     font-size: 4rem;
@@ -87,7 +88,18 @@
                     }
                 }
                 img {
+                    filter: grayscale(100)
+                }
+                .section__images {
                     width: 100%;
+                    display: flex;
+
+                    img:nth-child(1){
+                        width: 50%;
+                    }
+                    img:nth-child(2) {
+                        width: 50%;
+                    }
                 }
             }
         }
