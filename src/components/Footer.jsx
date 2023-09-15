@@ -1,4 +1,8 @@
 const Footer = () => {
+
+    let date = new Date;
+    let year = date.getFullYear();
+
     return (
         <div className="footer">
             <div className="footer__flex">
@@ -20,6 +24,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <p>Teléfono: 22965274</p>
+                    <p className="rights">&copy; {year} Derechos Reservados a Gimnasio Gimbo</p>
                 </div>
             </div>
         </div>
