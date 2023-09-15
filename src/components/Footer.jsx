@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__flex">
-                <h2>Contacto</h2>
+                <h2 id="contacto">Contacto</h2>
                 <div className="footer__contact">
                     <div className="footer__icons">
                         <a href="https://www.facebook.com/gymbogym.gym/?locale=es_LA">

@@ -3,12 +3,12 @@ const Header = () => {
         <div className="header">
             <div className="header__cnt">
                 <div className="header__image">
-                    <img src="/public/logo.png" alt="logotipo" />
+                    <img src="/logo.png" alt="logotipo" />
                 </div>
                 <div className="header__title">
                     <h1>Gimnasio Gimbo</h1>
                     <p>Con profesionales a cargo</p>
-                    <button>Contacto</button>
+                    <a href="#contacto">Contacto</a>
                 </div>
             </div>
         </div>
