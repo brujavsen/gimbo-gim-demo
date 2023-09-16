@@ -82,49 +82,40 @@
                 width: 100%;
                 border-radius: 10px;
                 cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
             }
             .one {
                 background-image: url('/card-1.jpg');
                 background-size: cover;
                 background-position: center;
-                filter: grayscale(100);
-                .backdrop {
-                    &:hover h3 {
-                        background-color: v.$amarillo;
-                        color: v.$negro;
-                    }
+                h3 {
+                    background-color: v.$amarillo;
+                    color: v.$negro;
                 }
             }
             .two {
                 background-image: url('/card-2.jpg');
                 background-size: cover;
                 background-position: center;
-                filter: grayscale(100);
-                .backdrop{
-                    &:hover h3 {
-                        background-color: v.$azul;
-                    }
+                h3 {
+                    background-color: v.$azul;
+                    color: v.$amarillo;
                 }
             }
             .three {
                 background-image: url('/card-3.jpg');
                 background-size: cover;
                 background-position: center;
-                filter: grayscale(100);
-                .backdrop{
-                    &:hover h3 {
-                        background-color: v.$rojo;
-                    }
+                h3 {
+                    background-color: v.$rojo;
+                    color: v.$blanco;
                 }
             }
             .one,.two,.three {
                 transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-                &:hover {
-                    filter: grayscale(0);
-                    .backdrop {
-                        backdrop-filter: blur(0);
-                    }
-                }
                 .backdrop {
                     display: flex;
                     text-align: center;
@@ -133,13 +124,10 @@
                     height: 350px;
                     width: 100%;
                     border-radius: 10px;
-                    backdrop-filter: blur(3px);
                     h3 {
-                        background-color: v.$gris;
                         margin: 0;
                         width: 100%;
                         padding: 2px 20px;
-                        color: v.$blanco;
                     }
                 }
             }
