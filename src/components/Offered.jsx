@@ -21,6 +21,27 @@ const Offered = () => {
 
                 <hr />
 
+                <div className="offered_activity">
+                    <h2>Actividades</h2>
+                    <div className="card__flex">
+                        <a href="#contacto" className="card one">
+                            <div className="backdrop">
+                                <h3>Entrenamiento Personalizado</h3>
+                            </div>
+                        </a>
+                        <a href="#contacto" className="card two">
+                            <div className="backdrop">
+                                <h3>Recuperación de Lesiones</h3>
+                            </div>
+                        </a>
+                        <a href="#contacto" className="card three">
+                            <div className="backdrop">
+                                <h3>Clases de Defensa Personal</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <div className="offered_service">
                     <div className="section">
                         <h3>Sala de Aparatos</h3>

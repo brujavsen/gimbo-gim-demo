@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as m;
 
 .header {
-    background: url('/public/hero.jpg');
+    background: url('/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: none;
@@ -40,10 +40,22 @@
                 text-align: center;
                 text-transform: uppercase;
             }
-            p {
-                color: v.$amarillo;
-                font-size: 2rem;
-                text-align: center;
+            .wrapper {
+                display: flex;
+                .first-text {
+                    font-size: 2.3rem;
+                    margin: 20px 0 50px 0;
+                    em {
+                        background-color: #232323c0;
+                        font-weight: bold;
+                        color: v.$amarillo;
+                        animation: colorful 6s infinite;
+                    }
+
+                    @include m.tablet {
+                        font-size: 3rem;
+                    }
+                }
             }
             a {
                 background-color: v.$amarillo;
@@ -64,3 +76,5 @@
         }
     }
 }
+
+@keyframes colorful {100%{filter: hue-rotate(360deg);}}

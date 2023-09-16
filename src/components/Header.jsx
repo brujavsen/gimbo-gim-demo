@@ -7,7 +7,9 @@ const Header = () => {
                 </div>
                 <div className="header__title">
                     <h1>Gimnasio Gimbo</h1>
-                    <p>Con profesionales a cargo</p>
+                    <div className="wrapper">
+                        <span className="first-text shake-horizontal">&#128170; <em>¡Consulten Promos!</em></span>
+                    </div>
                     <a href="#contacto">Contacto</a>
                 </div>
             </div>
