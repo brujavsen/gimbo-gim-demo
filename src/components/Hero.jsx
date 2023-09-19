@@ -1,7 +1,28 @@
+import { useEffect } from 'react';
+import useObserver from '../hooks/useObserver';
 const Hero = () => {
+    const [observer, setElements, entries] = useObserver({
+        threshold: 0.25,
+        root: null
+    });
 
+    useEffect(function() {
+        const lazyLoad = document.querySelectorAll('.lazy');
+        setElements(lazyLoad);
+    }, [setElements]);
+
+    useEffect(()=> {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                const lazyDiv = entry.target;
+                lazyDiv.classList.add('in-view');
+                lazyDiv.classList.remove('lazy');
+                observer.unobserve(lazyDiv);
+            }
+        });
+    },[entries, observer]);
     return (
-        <div className="hero">
+        <div className="hero lazy">
             <div className="hero__flex">
                 <div className="hero__info">
                     <h2>¿Dónde nos encontramos?</h2>
