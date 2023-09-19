@@ -21,52 +21,46 @@ const Offered = () => {
 
                 <hr />
 
-                <div className="offered_activity">
-                    <h2>Actividades</h2>
-                    <div className="card__flex">
-                        <a href="#contacto" className="card one">
-                            <div className="backdrop">
-                                <h3>Entrenamiento Personalizado</h3>
-                            </div>
-                        </a>
-                        <a href="#contacto" className="card two">
-                            <div className="backdrop">
-                                <h3>Recuperación de Lesiones</h3>
-                            </div>
-                        </a>
-                        <a href="#contacto" className="card three">
-                            <div className="backdrop">
-                                <h3>Clases de Defensa Personal</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
                 <div className="offered_service">
-                    <div className="section">
-                        <h3>Sala de Aparatos</h3>
-                        <ul>
-                            <li><span>Lunes</span> de 8:00 a 13 y de 14:30 a 22 hs</li>
-                            <li><span>Martes</span> de 8:00 a 13 y de 14:30 a 19 hs</li>
-                            <li><span>Miércoles</span> de 8:00 a 13 y de 14:30 a 22 hs </li>
-                            <li><span>Jueves</span> de 8:00 a 13 y de 14:30 a 19 hs </li>
-                            <li><span>Viernes</span> de 8:00 a 13 y de 14:30 a 22 hs</li>
-                            <li><span>Sábado</span> de 8:00 a 13:00 hs</li>
-                        </ul>
-                        <img src="/fitness.jpg" alt="sala-de-aparatos image" />
-                    </div>
-                    <div className="section">
-                        <h3>Clases de Karate</h3>
-                        <p>Martes y Jueves</p>
-                        <ul>
-                            <li>19:00 hs (Niños/as)</li>
-                            <li>20:00 hs (Adolescentes y adultos)</li>
-                        </ul>
-                        <div className="section__images">
-                            <img src="/karate.jpg" alt="karate image" />
-                            <img src="/karate-2.jpg" alt="karate2 image" />
+                    <h2>Actividades</h2>
+                    <section className="activity-flex">
+                        <div className="section activity-one">
+                            <h3>Sala de Aparatos</h3>
+                            <ul>
+                                <li><span>Lunes</span> de 8:00 a 13 y de 14:30 a 22 hs</li>
+                                <li><span>Martes</span> de 8:00 a 13 y de 14:30 a 19 hs</li>
+                                <li><span>Miércoles</span> de 8:00 a 13 y de 14:30 a 22 hs </li>
+                                <li><span>Jueves</span> de 8:00 a 13 y de 14:30 a 19 hs </li>
+                                <li><span>Viernes</span> de 8:00 a 13 y de 14:30 a 22 hs</li>
+                                <li><span>Sábado</span> de 8:00 a 13:00 hs</li>
+                            </ul>
+                            <img src="/fitness.jpg" alt="sala-de-aparatos image" />
+                            <div className="card one">
+                                <a href="#contacto" className="card__front"><span>Entrenamiento Personalizado</span></a>
+                            </div>
                         </div>
-                    </div>
+                        <div className="section activity-two">
+                            <h3>Clases de Karate</h3>
+                            <p>Martes y Jueves</p>
+                            <ul>
+                                <li>19:00 hs (Niños/as)</li>
+                                <li>20:00 hs (Adolescentes y adultos)</li>
+                            </ul>
+                            <div className="section__images">
+                                <img src="/karate.jpg" alt="karate image" />
+                                <img src="/karate-2.jpg" alt="karate2 image" />
+                            </div>
+                            <div className="card two">
+                                <a href="#contacto" className="card__front"><span>Clases de Defensa Personal</span></a>
+                            </div>
+                        </div>
+                    </section>
+                    <hr />
+                    <section className="section activity-three">
+                        <div className="card three">
+                            <a href="#contacto" className="card__front"><span>Recuperación de Lesiones</span></a>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

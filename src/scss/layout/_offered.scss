@@ -2,25 +2,22 @@
 @use '../abstracts/mixins' as m;
 
 .offered {
-    margin: 15rem 0 0 0;
+    margin: 25rem 0 0 0;
     margin-bottom: 10rem;
     .offered__cnt {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
-
-        @include m.desktopXL {
-            width: 80%;
-        }
 
         h2 {
             text-transform: uppercase;
             font-size: 4rem;
             color: v.$blanco;
             background-color: v.$azul;
+            border-radius: 1rem;
             padding: .8rem 0;
             text-align: center;
             width: 100%;
@@ -28,15 +25,23 @@
 
         hr {
             border: 3px dashed v.$azul;
-            width: 60%;
+            width: 90%;
             margin: 10rem 0;
+        }
+
+        @include m.desktopXL {
+            width: 80%;
+
+            hr {
+                margin: 25rem 0;
+            }
         }
 
         .offered__flex {
             display: flex;
             flex-direction: column;
-            gap: 5rem;
-            margin: 5rem 0;
+            gap: 0;
+            margin: 5rem 0 0 0;
             
             @include m.desktop {
                 gap: 10rem;
@@ -61,79 +66,7 @@
                 }
             }
         }
-        .offered_activity {
-            width: 100%;
-            margin: 0rem 0 15rem 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .card__flex {
-                margin-top: 10rem;
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-
-                @include m.desktopXL {
-                    flex-direction: row;
-                }
-            }
-            .card {
-                background-color: v.$amarillo;
-                height: 350px;
-                width: 100%;
-                border-radius: 10px;
-                cursor: pointer;
-
-                &:hover {
-                    transform: scale(1.02);
-                }
-            }
-            .one {
-                background-image: url('/card-1.jpg');
-                background-size: cover;
-                background-position: center;
-                h3 {
-                    background-color: v.$amarillo;
-                    color: v.$negro;
-                }
-            }
-            .two {
-                background-image: url('/card-2.jpg');
-                background-size: cover;
-                background-position: center;
-                h3 {
-                    background-color: v.$azul;
-                    color: v.$amarillo;
-                }
-            }
-            .three {
-                background-image: url('/card-3.jpg');
-                background-size: cover;
-                background-position: center;
-                h3 {
-                    background-color: v.$rojo;
-                    color: v.$blanco;
-                }
-            }
-            .one,.two,.three {
-                transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-                .backdrop {
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-items: center;
-                    height: 350px;
-                    width: 100%;
-                    border-radius: 10px;
-                    h3 {
-                        margin: 0;
-                        width: 100%;
-                        padding: 2px 20px;
-                    }
-                }
-            }
-        }
+            
         .offered_service {
             display: flex;
             flex-direction: column;
@@ -141,21 +74,37 @@
             justify-content: space-between;
             gap: 5rem;
             width: 100%;
-            @include m.desktop {
-                flex-direction: row;
-                align-items: flex-start;
+            
+            h2 {
+                border-radius: 1rem;
+            }
+
+            hr {
+                margin: 10rem 0;
+            }
+
+            .activity-flex {
+                display: flex;
+                flex-direction: column;
+                gap: 25rem;
+                @include m.desktop {
+                    flex-direction: row;
+                    gap: 10rem;
+                }
+
             }
             .section {
                 width: 100%;
                 h3 {
                     text-align: center;
-                    font-size: 4rem;
-                    color: v.$blanco;
-                    background-color: v.$azul;
+                    width: fit-content;
+                    margin: 0 auto;
+                    font-size: 3.5rem;
+                    border-radius: 1rem;
                     padding: .8rem 5rem;
                 }
                 p {
-                    font-weight: 600;
+                    font-weight: 800;
                     color: v.$azul;
                     font-size: 3rem;
                 }
@@ -171,10 +120,13 @@
                     li > span {
                         font-weight: 600;
                         color: v.$azul;
+                        font-weight: 800;
                     }
                 }
                 img {
-                    filter: grayscale(100)
+                    width: 100%;
+                    height: 300px;
+                    filter: grayscale(100);
                 }
                 .section__images {
                     width: 100%;
@@ -185,6 +137,83 @@
                     }
                     img:nth-child(2) {
                         width: 50%;
+                    }
+                }
+
+                // CARDS
+                .card {
+                    margin: 5rem auto 0 auto;
+                    width: 100%;
+                    height: 350px;
+                    border-radius: 1rem;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+
+                    .card__front {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 3rem;
+                        font-weight: 600;
+
+                        span {
+                            width: 100%;
+                            text-align: center;
+                            padding: 1rem 0;
+                        }
+                    }
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+
+            .activity-one {
+                h3 {
+                    background-color: v.$amarillo;
+                }
+                .one {
+                    background-image: url('/card-1.jpg');
+
+                    .card__front {
+                        span {
+                            color: v.$negro;
+                            background-color: v.$amarillo;
+                        }
+                    }
+                }
+            }
+            .activity-two {
+                h3 {
+                    background-color: v.$rojo;
+                    color: v.$blanco;
+                }
+                .two {
+                    background-image: url('/card-3.jpg');
+
+                    .card__front {
+                        span {
+                            color: v.$blanco;
+                            background-color: v.$rojo;
+                        }
+                    }
+                }
+            }
+            .activity-three {
+                margin-top: -13rem;
+                margin-bottom: 15rem;
+                .three {
+                    background-image: url('/card-2.jpg');
+                }
+
+                .card__front {
+                    span {
+                        color: v.$amarillo;
+                        background-color: v.$azul;
                     }
                 }
             }
