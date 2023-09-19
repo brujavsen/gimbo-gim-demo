@@ -2,8 +2,12 @@
 @use '../abstracts/mixins' as m;
 
 .offered {
-    margin: 35rem 0 0 0;
+    margin: 15rem 0 0 0;
     margin-bottom: 10rem;
+    
+    @include m.tablet {
+        margin: 35rem 0 0 0;
+    }
     .offered__cnt {
         display: flex;
         flex-direction: column;

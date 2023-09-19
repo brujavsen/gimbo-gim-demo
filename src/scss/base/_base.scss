@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 html {
     font-size: 62.5%;
@@ -57,21 +58,17 @@ button {
     cursor: pointer;
     width: 55px;
     position: absolute;
-    top: 94vh;
+    top: 91vh;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
     animation:shake-vertical 20s linear infinite, colorchange 5s alternate infinite;
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes colorchange {
-    0% {
-        stroke: v.$negro;
-    }
-    100% {
-        stroke-width: 3;
-        stroke: v.$azul;
+    stroke: v.$rojo;
+
+    @include m.tablet {
+        top: 94vh;
     }
 }
 @keyframes shake-vertical{0%,100%{transform:translateY(0)}10%,30%,50%,70%{transform:translateY(-8px)}20%,40%,60%{transform:translateY(8px)}80%{transform:translateY(6.4px)}90%{transform:translateY(-6.4px)}}

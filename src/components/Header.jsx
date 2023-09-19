@@ -7,7 +7,6 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY)
             if (window.scrollY > 500) {
                 setActiveBtn(true);
             } else {
