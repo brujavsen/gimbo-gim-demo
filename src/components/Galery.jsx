@@ -26,12 +26,30 @@ const Galery = () => {
         <div className="gallery_cnt">
             <h2>Galeria</h2>
             <div className="column">
-                <img src="/image-gimbo-1.jpg" className="lazy image-1" alt="gallery images" />
-                <img src="/image-gimbo-2.jpg" className="lazy image-2" alt="gallery images" />
-                <img src="/image-gimbo-3.jpg" className="lazy image-3" alt="gallery images" />
-                <img src="/image-gimbo-5.jpg" className="lazy image-5" alt="gallery images" />
-                <img src="/image-gimbo-6.jpg" className="lazy image-6" alt="gallery images" />
-                <img src="/image-gimbo-8.jpg" className="lazy image-7" alt="gallery images" />
+                <picture>
+                    <source srcSet='/image-gimbo-1.webp' type='image/webp' />
+                    <img loading='lazy' src="/image-gimbo-1.jpg" className="lazy image-1" alt="gallery images" />
+                </picture>
+                <picture>
+                    <source srcSet='/image-gimbo-2.webp' type='image/webp' />
+                    <img src="/image-gimbo-2.jpg" className="lazy image-2" alt="gallery images" />
+                </picture>
+                <picture>
+                    <source srcSet='/image-gimbo-3.webp' type='image/webp' />
+                    <img src="/image-gimbo-3.jpg" className="lazy image-3" alt="gallery images" />
+                </picture>
+                <picture>
+                    <source srcSet='/image-gimbo-5.webp' type='image/webp' />
+                    <img src="/image-gimbo-5.jpg" className="lazy image-5" alt="gallery images" />
+                </picture>
+                <picture>
+                    <source srcSet='/image-gimbo-6.webp' type='image/webp' />
+                    <img src="/image-gimbo-6.jpg" className="lazy image-6" alt="gallery images" />
+                </picture>
+                <picture>
+                    <source srcSet='/image-gimbo-8.webp' type='image/webp' />
+                    <img src="/image-gimbo-8.jpg" className="lazy image-8" alt="gallery images" />
+                </picture>
             </div>
         </div>
     )

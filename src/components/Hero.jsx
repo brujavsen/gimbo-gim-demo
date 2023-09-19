@@ -22,9 +22,9 @@ const Hero = () => {
         });
     },[entries, observer]);
     return (
-        <div className="hero lazy">
+        <div className="hero">
             <div className="hero__flex">
-                <div className="hero__info">
+                <div className="hero__info lazy">
                     <h2>¿Dónde nos encontramos?</h2>
                     <p>Camino del Andaluz KM 4.800 sobre Ruta 84, 15700. Canelones, Uruguay</p>
                 </div>

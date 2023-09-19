@@ -100,7 +100,7 @@ button {
 
 // INTERSECTION OBSERVER
 .in-view {
-    transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: opacity .5s cubic-bezier(0.19, 1, 0.22, 1);
     opacity: 1;
 }
 .lazy {
