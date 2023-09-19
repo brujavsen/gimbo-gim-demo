@@ -18,7 +18,7 @@
 
         h2 {
             text-transform: uppercase;
-            font-size: 4rem;
+            font-size: 2.5rem;
             color: v.$blanco;
             background-color: v.$azul;
             border-radius: 1rem;
@@ -36,8 +36,8 @@
         @include m.desktopXL {
             width: 80%;
 
-            hr {
-                margin: 25rem 0;
+            h2 {
+                font-size: 4rem;
             }
         }
 
@@ -60,11 +60,20 @@
                 h3 {
                     text-align: center;
                     color: v.$azul;
+                    font-size: 2rem;
                 }
                 p {
                     text-align: center;
-                    font-size: 2rem;
-                    @include m.desktopXL {
+                    font-size: 1.7rem;
+                }
+                @include m.desktopXL {
+                    h3 {
+                        text-align: center;
+                        color: v.$azul;
+                        font-size: 2.8rem;
+                    }
+                    p {
+                        text-align: center;
                         font-size: 2.5rem;
                     }
                 }
@@ -80,7 +89,13 @@
             width: 100%;
             
             h2 {
+                font-size: 2.5rem;
                 border-radius: 1rem;
+            }
+            @include m.desktopXL {
+                h2 {
+                    font-size: 4rem;
+                }
             }
 
             hr {
@@ -95,7 +110,6 @@
                     flex-direction: row;
                     gap: 10rem;
                 }
-
             }
             .section {
                 width: 100%;
@@ -103,19 +117,24 @@
                     text-align: center;
                     width: fit-content;
                     margin: 0 auto;
-                    font-size: 3.5rem;
+                    font-size: 2.5rem;
                     border-radius: 1rem;
                     padding: .8rem 5rem;
+                }
+                @include m.desktop {
+                    h3 {
+                        font-size: 3.5rem;
+                    }
                 }
                 p {
                     font-weight: 800;
                     color: v.$azul;
-                    font-size: 3rem;
+                    font-size: 2.3rem;
                 }
                 ul {
                     margin: 3rem 0;
                     line-height: 2;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     @include m.desktopXL {
                         & {
                             font-size: 3rem;
@@ -158,8 +177,12 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                         font-weight: 600;
+
+                        @include m.desktop {
+                            font-size: 3rem;
+                        }
 
                         span {
                             width: 100%;
