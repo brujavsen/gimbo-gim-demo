@@ -10,19 +10,19 @@ const Galery = () => {
                 <Carousel.Item>
                     <picture>
                         <source srcSet='/image-gimbo-1.webp' type='image/webp' />
-                        <img loading='lazy' src="/image-gimbo-1.jpg" className="lazy image-1" alt="gallery images" />
+                        <img loading='lazy' src="/image-gimbo-1.jpg" className="image-1" alt="gallery images" />
                     </picture>
                 </Carousel.Item>
                 <Carousel.Item>
                     <picture>
                         <source srcSet='/image-gimbo-2.webp' type='image/webp' />
-                        <img src="/image-gimbo-2.jpg" className="lazy image-2" alt="gallery images" />
+                        <img loading='lazy' src="/image-gimbo-2.jpg" className="image-2" alt="gallery images" />
                     </picture>
                 </Carousel.Item>
                 <Carousel.Item>
                     <picture>
                         <source srcSet='/image-gimbo-3.webp' type='image/webp' />
-                        <img src="/image-gimbo-3.jpg" className="lazy image-3" alt="gallery images" />
+                        <img loading='lazy' src="/image-gimbo-3.jpg" className="image-3" alt="gallery images" />
                     </picture>
                 </Carousel.Item>
             </Carousel>
