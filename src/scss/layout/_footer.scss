@@ -9,11 +9,6 @@
     background-image: url('bg-new.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 10rem;
-    
-    @include m.tablet {
-        background-position-y: 5rem;
-    }
 
     .footer__flex {
         width: 100%;
