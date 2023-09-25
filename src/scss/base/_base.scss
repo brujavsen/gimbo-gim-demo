@@ -106,13 +106,3 @@ button {
 .scroll-active {
     display: block !important;
 }
-
-
-// INTERSECTION OBSERVER
-.in-view {
-    transition: opacity .5s cubic-bezier(0.19, 1, 0.22, 1);
-    opacity: 1;
-}
-.lazy {
-    opacity: 0;
-}

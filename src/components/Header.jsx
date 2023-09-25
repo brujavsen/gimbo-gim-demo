@@ -41,7 +41,7 @@ const Header = () => {
                     <a href="#contacto">Contacto</a>
                 </div>
             </div>
-            <Link activeClass="arrow-down-cnt" to="offered" spy={true} smooth={true} offset={0} duration={1000}>
+            <Link activeClass="arrow-down-cnt" to="offered" spy={true} smooth={true} offset={-10} duration={800}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="arrow-down">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
                 </svg>
