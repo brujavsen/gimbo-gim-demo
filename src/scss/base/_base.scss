@@ -15,6 +15,9 @@ body {
     font-family: v.$fuente-principal;
     font-size: 1.6rem;
     scroll-behavior: smooth;
+    background-image: url('/bg-any.svg');
+    background-repeat: none;
+    background-size: cover;
 }
 
 p {
@@ -37,6 +40,14 @@ h1 {
 }
 h2 {
     font-size: 3.6rem;
+    background-color: v.$azul;
+    color: v.$blanco;
+    border-radius: 5rem;
+    padding: .8rem 0;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 h3 {
     font-size: 3rem;
@@ -58,7 +69,7 @@ button {
     cursor: pointer;
     width: 55px;
     position: absolute;
-    top: 91vh;
+    top: 90vh;
     left: 0;
     right: 0;
     bottom: 0;

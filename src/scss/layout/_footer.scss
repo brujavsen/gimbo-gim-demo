@@ -6,19 +6,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('bg-new.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10rem;
+    
+    @include m.tablet {
+        background-position-y: 5rem;
+    }
 
     .footer__flex {
-        width: 90%;
+        width: 100%;
         h2 {
-            text-align: center;
-            color: v.$blanco;
-            background-color: v.$azul;
-            width: fit-content;
-            margin: 5rem auto;
-            padding: .8rem 2rem;
-            width: 100%;
+            width: 80%;
+            margin: 2.5rem auto 0 auto;
             font-size: 2.5rem;
-            border-radius: 1rem;
             @include m.desktop {
                 font-size: 4rem;
             }
@@ -29,6 +31,7 @@
             justify-content: center;
             align-items: center;
             margin: 5rem 0;
+            backdrop-filter: blur(2px);
 
             .footer__icons {
                 display: flex;
@@ -42,22 +45,28 @@
                     span {
                         text-align: center;
                         color: v.$negro;
-                    }
-                    &:hover span {
                         font-weight: bold;
                     }
                     &:nth-child(1):hover svg {
                         fill: v.$azul;
                     }
+                    &:nth-child(1):hover span {
+                        color: v.$azul;
+                    }
                     &:nth-child(2):hover svg {
                         fill: lightgreen;
+                    }
+                    &:nth-child(2):hover span {
+                        color: lightgreen;
                     }
                 }
             }
             p {
+                text-align: center;
                 margin: 2rem 1rem;
                 font-weight: 500;
                 font-size: 2.5rem;
+                font-weight: 800;
             }
             .rights {
                 margin-top: 5rem;

@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as m;
 
 .offered {
-    margin: 15rem 0 0 0;
+    margin: 25rem 0 0 0;
     margin-bottom: 10rem;
     
     @include m.tablet {
@@ -17,18 +17,10 @@
         margin: 0 auto;
 
         h2 {
-            text-transform: uppercase;
-            font-size: 2.5rem;
-            color: v.$blanco;
-            background-color: v.$azul;
-            border-radius: 1rem;
-            padding: .8rem 0;
-            text-align: center;
-            width: 100%;
+            font-size: 2.8rem;
         }
 
         hr {
-            border: 3px dashed v.$azul;
             width: 90%;
             margin: 10rem 0;
         }
@@ -44,7 +36,7 @@
         .offered__flex {
             display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: 2rem;
             margin: 5rem 0 0 0;
             
             @include m.desktop {
@@ -69,7 +61,6 @@
                 @include m.desktopXL {
                     h3 {
                         text-align: center;
-                        color: v.$azul;
                         font-size: 2.8rem;
                     }
                     p {
@@ -89,8 +80,7 @@
             width: 100%;
             
             h2 {
-                font-size: 2.5rem;
-                border-radius: 1rem;
+                font-size: 2.8rem;
             }
             @include m.desktopXL {
                 h2 {
@@ -112,52 +102,65 @@
                 }
             }
             .section {
+                background-image: url('cards-bg.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 width: 100%;
-                h3 {
-                    text-align: center;
-                    width: fit-content;
-                    margin: 0 auto;
-                    font-size: 2.5rem;
-                    border-radius: 1rem;
-                    padding: .8rem 5rem;
+                background-color: v.$azul;
+                border-radius: 2rem;
+                picture img {
+                    border-radius: 1rem 1rem 0 0;
                 }
-                @include m.desktop {
-                    h3 {
-                        font-size: 3.5rem;
+                h3 {
+                    font-size: 3rem;
+                    text-align: center;
+                    margin: 2rem auto;
+                    color: v.$blanco;
+                    @include m.desktop {
+                        font-size: 4rem;
                     }
                 }
-                p {
-                    font-weight: 800;
-                    color: v.$azul;
-                    font-size: 2.3rem;
-                }
                 ul {
+                    backdrop-filter: blur(8px);
                     margin: 3rem 0;
+                    padding: 0;
+                    text-align: center;
                     line-height: 2;
                     font-size: 1.8rem;
-                    @include m.desktopXL {
-                        & {
-                            font-size: 3rem;
+                    color: v.$blanco;
+                    li {
+                        list-style: none;
+                        border-radius: 2px;
+                        margin: 0 auto;
+                    }
+                    & .dias {
+                        font-weight: 800;
+                        text-align: center;
+                        font-size: 2rem;
+                        text-transform: uppercase;
+                        color: v.$amarillo;
+                        @include m.desktop {
+                            font-size: 2.8rem;
                         }
                     }
                     li > span {
-                        font-weight: 600;
-                        color: v.$azul;
+                        text-transform: uppercase;
                         font-weight: 800;
+                        color: v.$amarillo;
+                    }
+                    @include m.desktopXL {
+                        & {
+                            font-size: 2.3rem;
+                            text-align: center;
+                        }
                     }
                 }
                 img {
                     width: 100%;
-                    height: 300px;
                     filter: grayscale(100);
-                }
-                .section__images {
-                    width: 100%;
-                    display: flex;
-
-                    picture{
-                        width: 50%;
-                    }
                 }
 
                 // CARDS
@@ -165,7 +168,8 @@
                     margin: 5rem auto 0 auto;
                     width: 100%;
                     height: 350px;
-                    border-radius: 1rem;
+                    border: none;
+                    border-radius: 0 0 1rem 1rem;
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -198,7 +202,9 @@
 
             .activity-one {
                 h3 {
-                    background-color: v.$amarillo;
+                    font-weight: 800;
+                    width: fit-content;
+                    width: 100%;
                 }
                 .one {
                     background-image: url('/card-1.jpg');
@@ -213,8 +219,14 @@
             }
             .activity-two {
                 h3 {
-                    background-color: v.$rojo;
-                    color: v.$blanco;
+                    font-weight: 800;
+                    width: 100%;
+                }
+                ul > li > span {
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    color: v.$amarillo;
+                    text-shadow: none;
                 }
                 .two {
                     background-image: url('/card-3.jpg');
@@ -230,6 +242,7 @@
             .activity-three {
                 margin-top: -13rem;
                 margin-bottom: 15rem;
+                background-color: transparent;
                 .three {
                     background-image: url('/card-2.jpg');
                 }

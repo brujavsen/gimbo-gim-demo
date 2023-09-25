@@ -31,9 +31,7 @@
             text-align: center;
             h2 {
                 font-size: 2.5rem;
-                background-color: v.$azul;
-                padding: .8rem 5rem;
-                border-radius: 1rem;
+                padding: .8rem;
                 @include m.desktop {
                     font-size: 4rem;
                 }
