@@ -1,35 +1,12 @@
-import { useEffect } from 'react';
-import useObserver from '../hooks/useObserver';
 
 const Offered = () => {
-
-    const [observer, setElements, entries] = useObserver({
-        threshold: 0.25,
-        root: null
-    });
-
-    useEffect(function() {
-        const lazyLoad = document.querySelectorAll('.lazy');
-        setElements(lazyLoad);
-    }, [setElements]);
-
-    useEffect(()=> {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                const lazyDiv = entry.target;
-                lazyDiv.classList.add('in-view');
-                lazyDiv.classList.remove('lazy');
-                observer.unobserve(lazyDiv);
-            }
-        });
-    },[entries, observer]);
 
     return (
         <>
             <div className="offered" id='offered'>
                 <div className="offered__cnt">
                     <h2>Qué ofrecemos</h2>
-                    <div className="offered__flex lazy">
+                    <div className="offered__flex">
                         <div className="flex__child">
                             <h3>Ambiente Climatizado</h3>
                             <p>Disfruta de la comodidad en nuestro espacio con ambiente climatizado.</p>
@@ -52,7 +29,7 @@ const Offered = () => {
                             <div className="section activity-one">
                                 <picture>
                                     <source srcSet='/fitness.webp' type='image/webp' />
-                                    <img loading='lazy' src="/fitness.jpg" className="lazy" alt="sala-de-aparatos image" />
+                                    <img loading='lazy' src="/fitness.jpg" alt="sala-de-aparatos image" />
                                 </picture>
                                 <h3>Sala de Aparatos</h3>
                                 <ul>
@@ -71,7 +48,7 @@ const Offered = () => {
                             <div className="section activity-two">
                                 <picture>
                                     <source srcSet='/karate.webp' type='image/webp' />
-                                    <img loading='lazy' src="/karate.png" className="lazy" alt="karate image" />
+                                    <img loading='lazy' src="/karate.png" alt="karate image" />
                                 </picture>
                                 <h3>Clases de Karate</h3>
                                 <ul>
@@ -85,7 +62,7 @@ const Offered = () => {
                             </div>
                         </section>
                         <hr />
-                        <section className="section activity-three lazy">
+                        <section className="section activity-three">
                             <div className="card three">
                                 <a href="#contacto" className="card__front"><span>Recuperación de Lesiones</span></a>
                             </div>

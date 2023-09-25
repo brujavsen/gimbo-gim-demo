@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('bg-new.svg');
+    background: url('/bg-footer.svg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -52,7 +52,7 @@
                         fill: lightgreen;
                     }
                     &:nth-child(2):hover span {
-                        color: lightgreen;
+                        color: green;
                     }
                 }
             }

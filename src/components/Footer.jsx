@@ -1,6 +1,4 @@
 import swal from "sweetalert";
-import { useEffect } from 'react';
-import useObserver from '../hooks/useObserver';
 
 const Footer = () => {
 
@@ -25,29 +23,8 @@ const Footer = () => {
         });
     };
 
-    const [observer, setElements, entries] = useObserver({
-        threshold: 0.25,
-        root: null
-    });
-
-    useEffect(function() {
-        const lazyLoad = document.querySelectorAll('.lazy');
-        setElements(lazyLoad);
-    }, [setElements]);
-
-    useEffect(()=> {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                const lazyDiv = entry.target;
-                lazyDiv.classList.add('in-view');
-                lazyDiv.classList.remove('lazy');
-                observer.unobserve(lazyDiv);
-            }
-        });
-    },[entries, observer]);
-
     return (
-        <div className="footer lazy">
+        <div className="footer">
             <div className="footer__flex">
                 <h2 id="contacto">Contacto</h2>
                 <div className="footer__contact">

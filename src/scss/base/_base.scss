@@ -15,9 +15,8 @@ body {
     font-family: v.$fuente-principal;
     font-size: 1.6rem;
     scroll-behavior: smooth;
-    background-image: url('/bg-any.svg');
-    background-repeat: none;
-    background-size: cover;
+    background: rgb(135,201,238);
+    background: linear-gradient(0deg, rgb(186, 222, 243) 0%, rgba(255,255,255,1) 100%);
 }
 
 p {
