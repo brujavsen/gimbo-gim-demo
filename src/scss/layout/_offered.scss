@@ -45,7 +45,7 @@
 
         hr {
             width: 90%;
-            margin: 10rem 0;
+            margin: 5rem 0;
         }
 
         @include m.desktopXL {
@@ -59,7 +59,7 @@
         .offered__flex {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: .5rem;
             margin: 5rem 0 0 0;
             
             @include m.desktop {
@@ -258,7 +258,6 @@
                 }
             }
             .activity-three {
-                margin-top: -13rem;
                 margin-bottom: 15rem;
                 background-color: transparent;
                 

@@ -61,7 +61,6 @@ const Offered = () => {
                                 </div>
                             </div>
                         </section>
-                        <hr />
                         <section className="section activity-three">
                             <div className="card three">
                                 <a href="#contacto" className="card__front"><span>Recuperación de Lesiones</span></a>

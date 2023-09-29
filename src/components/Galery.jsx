@@ -1,30 +1,17 @@
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "./helper/Carousel";
 
 const Galery = () => {
-    
+
+    const image = [
+        '/image-gimbo-1.jpg',
+        '/image-gimbo-2.jpg',
+        '/image-gimbo-3.jpg'
+    ]
+
     return (
         <div className="gallery_cnt">
             <h2>Galeria</h2>
-            <Carousel>
-                <Carousel.Item>
-                    <picture>
-                        <source srcSet='/image-gimbo-1.webp' type='image/webp' />
-                        <img loading='lazy' src="/image-gimbo-1.jpg" className="image-1" alt="gallery images" />
-                    </picture>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <picture>
-                        <source srcSet='/image-gimbo-2.webp' type='image/webp' />
-                        <img loading='lazy' src="/image-gimbo-2.jpg" className="image-2" alt="gallery images" />
-                    </picture>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <picture>
-                        <source srcSet='/image-gimbo-3.webp' type='image/webp' />
-                        <img loading='lazy' src="/image-gimbo-3.jpg" className="image-3" alt="gallery images" />
-                    </picture>
-                </Carousel.Item>
-            </Carousel>
+            <Carousel img={image}/>
         </div>
     )
 }

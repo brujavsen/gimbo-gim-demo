@@ -1,6 +1,7 @@
 Nuevas Características
 -Adding Modernizr to improve perf. images Webp
 -Remove bootstrap CDN
+-REMOVE BOOTSTRAP (NULL PERFORMANCE VERSION 5.01, NOT ADDING) 
 -Adding new images format webp
 -Improve Perf loading Lazy
 -Media Query corrections on "services"

@@ -2,8 +2,8 @@
 @use '../abstracts/mixins' as m;
 
 .gallery_cnt {
-    background-color: v.$amarillo;
-    padding: 1rem;
+    background-color: v.$azul;
+    padding: .5rem;
     margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
@@ -12,22 +12,66 @@
     }
 
     h2 {
-        font-size: 3.4rem;
-        background-color: v.$amarillo;
-        color: v.$negro;
+        font-size: 3rem;
+        background-color: none;
+        color: v.$blanco;
         margin: 0 auto 2rem auto;
         width: fit-content;
         height: fit-content;
         text-align: center;
         writing-mode: horizontal-tb;
-    }
-    
-    @include m.desktop {
-        flex-direction: row;
-        h2 {
-            width: 10%;
-            margin: 0 2rem 2rem auto;
-            writing-mode: vertical-rl;
+        
+        @include m.tablet {
+            font-size: 5rem;
         }
     }
+    
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+        margin: 0 auto;
+        img {
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 850px;
+            border-radius: 10px;
+        }
+        
+        button {
+            background: v.$amarillo;
+            color: v.$negro;
+            border: none;
+            font-size: 2rem;
+            border-radius: 15px;
+            padding: 5px 30px;
+            cursor: pointer;
+            z-index: 50;
+            position: relative;
+            transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+
+            @include m.tablet {
+                font-size: 3rem;
+                padding: 5px 50px;
+            }
+            &:hover {
+                color: v.$blanco;
+                background: crimson;
+            }
+        }
+        .btns-arrow {
+            display: flex;
+
+            .left-btn,
+            .right-btn {
+                margin: 10px 20px 10px 20px;
+            }
+
+        }
+    }
+    
+
 }
