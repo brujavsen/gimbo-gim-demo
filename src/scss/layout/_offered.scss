@@ -1,6 +1,29 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
+
+// Modernizr Webp Images Cards
+.webp .one {
+    background-image: url('/card-1.webp');
+}
+.no-webp .one {
+    background-image: url('/card-1.jpg');
+}
+.webp .two {
+    background-image: url('/card-3.webp');
+}
+.no-webp .two {
+    background-image: url('/card-3.jpg');
+}
+.webp .three {
+    background-image: url('/card-2.webp');
+}
+.no-webp .three {
+    background-image: url('/card-2.jpg');
+}
+
+
+// Offered Styles
 .offered {
     margin: 25rem 0 0 0;
     margin-bottom: 10rem;
@@ -96,9 +119,9 @@
                 display: flex;
                 flex-direction: column;
                 gap: 25rem;
-                @include m.desktop {
+                @include m.tablet {
                     flex-direction: row;
-                    gap: 10rem;
+                    gap: 5rem;
                 }
             }
             .section {
@@ -203,9 +226,8 @@
                     width: fit-content;
                     width: 100%;
                 }
-                .one {
-                    background-image: url('/card-1.jpg');
 
+                .one {
                     .card__front {
                         span {
                             color: v.$negro;
@@ -225,9 +247,8 @@
                     color: v.$amarillo;
                     text-shadow: none;
                 }
-                .two {
-                    background-image: url('/card-3.jpg');
 
+                .two {
                     .card__front {
                         span {
                             color: v.$blanco;
@@ -240,14 +261,13 @@
                 margin-top: -13rem;
                 margin-bottom: 15rem;
                 background-color: transparent;
+                
                 .three {
-                    background-image: url('/card-2.jpg');
-                }
-
-                .card__front {
-                    span {
-                        color: v.$amarillo;
-                        background-color: v.$azul;
+                    .card__front {
+                        span {
+                            color: v.$amarillo;
+                            background-color: v.$azul;
+                        }
                     }
                 }
             }

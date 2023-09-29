@@ -1,8 +1,13 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
-.hero {
+.webp .hero {
+    background-image: url('/hero-2.webp');
+}
+.no-webp .hero {
     background-image: url('/hero-2.jpg');
+}
+.hero {
     background-position: center;
     background-size: cover;
     height: 900px;
