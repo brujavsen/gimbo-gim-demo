@@ -25,53 +25,5 @@
             font-size: 5rem;
         }
     }
-    
-    .carousel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: fit-content;
-        margin: 0 auto;
-        img {
-            margin: 0 auto;
-            max-width: 100%;
-            max-height: 850px;
-            border-radius: 10px;
-        }
-        
-        button {
-            background: v.$amarillo;
-            color: v.$negro;
-            border: none;
-            font-size: 2rem;
-            border-radius: 15px;
-            padding: 5px 30px;
-            cursor: pointer;
-            z-index: 50;
-            position: relative;
-            transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
-
-            @include m.tablet {
-                font-size: 3rem;
-                padding: 5px 50px;
-            }
-            &:hover {
-                color: v.$blanco;
-                background: crimson;
-            }
-        }
-        .btns-arrow {
-            display: flex;
-
-            .left-btn,
-            .right-btn {
-                margin: 10px 20px 10px 20px;
-            }
-
-        }
-    }
-    
 
 }

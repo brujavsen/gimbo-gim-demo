@@ -1,25 +1,23 @@
-import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Carousel = ({ img }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const previousImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? img.length - 1 : prevIndex - 1));
-    };
-
-    const nextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex === img.length - 1 ? 0 : prevIndex + 1));
-    };
+const CarouselImages = () => {
 
     return (
-        <div className="carousel">
-            <img loading='lazy' src={img[currentImageIndex]} alt="image carousel" />
-            <div className='btns-arrow'>
-                <button className='left-btn' onClick={previousImage}>⬅</button>
-                <button className='right-btn' onClick={nextImage}>➡</button>
-            </div>
+        <div className='carousel'>
+            <Carousel>
+            <Carousel.Item interval={3000}>
+                <img loading='lazy' src='/image-gimbo-1.jpg' alt='image gimnasio'></img>
+            </Carousel.Item>
+            <Carousel.Item interval={3000}>
+                <img loading='lazy' src='/image-gimbo-2.jpg' alt='image gimnasio'></img>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img loading='lazy' src='/image-gimbo-3.jpg' alt='image gimnasio'></img>
+            </Carousel.Item>
+            </Carousel>
         </div>
     );
 };
 
-export default Carousel;
+export default CarouselImages;
