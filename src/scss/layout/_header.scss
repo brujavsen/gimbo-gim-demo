@@ -26,14 +26,22 @@
         align-items: center;
     
         .header__image {
-            @include m.tablet {
-                align-self: baseline;
-            }
-            align-self: center;
-            margin: 50px 10px;
+            width: 100%;
+            margin: 5rem auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
             img {
                 width: 150px;
                 height: 150px;
+            }
+            a {
+                color: v.$blanco;
+                background-color: v.$azul;
+                padding: .8rem;
+                border-radius: 10px;
             }
         }
         .header__title {
