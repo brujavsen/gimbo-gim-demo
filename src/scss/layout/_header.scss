@@ -12,6 +12,7 @@
     background-position: center;
     background-repeat: none;
     height: 800px;
+    box-shadow: 0 40px 50px v.$azul;
 
     @include m.tablet {
         height: 700px;
@@ -53,15 +54,17 @@
                 font-size: 5rem;
                 text-align: center;
                 text-transform: uppercase;
+                font-family: v.$fuente-secundaria;
             }
             .wrapper {
                 display: flex;
                 .first-text {
                     text-align: center;
-                    font-size: 2.3rem;
+                    font-size: 2.5rem;
                     margin: 20px 0 50px 0;
+                    color: v.$amarillo;
                     em {
-                        background-color: #232323c0;
+                        background-color: #00000068;
                         font-weight: bold;
                         color: v.$amarillo;
                         animation: colorful 6s infinite;
@@ -73,12 +76,20 @@
                 }
             }
             a {
-                background-color: v.$amarillo;
-                padding: 1.5rem 2.5rem;
-                border-radius: 5px;
-                font-weight: bold;
-                color: v.$negro;
+                border: 3px solid v.$amarillo;
+                padding: 1.5rem 5rem;
+                border-radius: 2rem 0 2rem 0;
+                font-weight: bolder;
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                color: v.$amarillo;
                 cursor: pointer;
+                transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+                &:hover {
+                    border-radius: 0 2rem 0 2rem;
+                    color: v.$negro;
+                    background-color: v.$amarillo;
+                }
             }
             @include m.desktop {
                 h1 {

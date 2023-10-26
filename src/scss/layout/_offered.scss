@@ -46,6 +46,10 @@
         hr {
             width: 90%;
             margin: 5rem 0;
+            border: 3px dashed v.$azul;
+            @include m.tablet {
+                margin: 10rem 0;
+            }
         }
 
         @include m.desktopXL {
@@ -72,14 +76,18 @@
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+                font-size: 5rem;
+                color: v.$azul;
                 h3 {
                     text-align: center;
                     color: v.$azul;
-                    font-size: 2rem;
+                    font-size: 2.5rem;
+                    margin: 2rem 0;
                 }
                 p {
                     text-align: center;
                     font-size: 1.7rem;
+                    color: v.$azul;
                 }
                 @include m.desktopXL {
                     h3 {
@@ -99,7 +107,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            gap: 5rem;
+            gap: 6rem;
             width: 100%;
             
             h2 {
@@ -111,14 +119,10 @@
                 }
             }
 
-            hr {
-                margin: 10rem 0;
-            }
-
             .activity-flex {
                 display: flex;
                 flex-direction: column;
-                gap: 25rem;
+                gap: 10rem;
                 @include m.tablet {
                     flex-direction: row;
                     gap: 5rem;
@@ -129,10 +133,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 width: 100%;
-                background-color: v.$azul;
-                border-radius: 2rem;
                 picture img {
-                    border-radius: 1rem 1rem 0 0;
                     height: 100%;
                     width: 100%;
                 }
@@ -140,7 +141,7 @@
                     font-size: 3rem;
                     text-align: center;
                     margin: 2rem auto;
-                    color: v.$blanco;
+                    color: v.$negro;
                     @include m.desktop {
                         font-size: 4rem;
                     }
@@ -152,10 +153,9 @@
                     text-align: center;
                     line-height: 2;
                     font-size: 1.8rem;
-                    color: v.$blanco;
+                    color: v.$negro;
                     li {
                         list-style: none;
-                        border-radius: 2px;
                         margin: 0 auto;
                     }
                     & .dias {
@@ -171,7 +171,7 @@
                     li > span {
                         text-transform: uppercase;
                         font-weight: 800;
-                        color: v.$amarillo;
+                        color: v.$negro;
                     }
                     @include m.desktopXL {
                         & {
@@ -191,7 +191,6 @@
                     width: 100%;
                     height: 350px;
                     border: none;
-                    border-radius: 0 0 1rem 1rem;
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -223,6 +222,7 @@
             }
 
             .activity-one {
+                background-color: v.$amarillo;
                 h3 {
                     font-weight: 800;
                     width: fit-content;
@@ -239,15 +239,20 @@
                 }
             }
             .activity-two {
+                background-color: v.$rojo;
                 h3 {
                     font-weight: 800;
                     width: 100%;
+                    color: v.$blanco;
                 }
                 ul > li > span {
                     text-transform: capitalize;
                     font-weight: 600;
-                    color: v.$amarillo;
+                    color: v.$blanco;
                     text-shadow: none;
+                }
+                li {
+                    color: v.$blanco;
                 }
 
                 .two {
@@ -260,9 +265,11 @@
                 }
             }
             .activity-three {
-                margin-bottom: 15rem;
                 background-color: transparent;
-                
+                box-shadow: none;
+                @include m.tablet {
+                    margin-bottom: 15rem;
+                }
                 .three {
                     .card__front {
                         span {

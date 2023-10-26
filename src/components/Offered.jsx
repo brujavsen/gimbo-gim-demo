@@ -1,4 +1,7 @@
 
+import { WiFire, WiTime3} from "react-icons/wi";
+import { BiDumbbell} from "react-icons/bi";
+
 const Offered = () => {
 
     return (
@@ -8,14 +11,17 @@ const Offered = () => {
                     <h2>Qué ofrecemos</h2>
                     <div className="offered__flex">
                         <div className="flex__child">
+                            <WiFire/>
                             <h3>Ambiente Climatizado</h3>
                             <p>Disfruta de la comodidad en nuestro espacio con ambiente climatizado.</p>
                         </div>
                         <div className="flex__child">
+                            <WiTime3/>
                             <h3>Amplio Horario</h3>
                             <p>Ofrecemos un amplio horario para adaptarse a tu agenda ocupada. Ya sea temprano en la mañana o tarde en la noche.</p>
                         </div>
                         <div className="flex__child">
+                            <BiDumbbell/>
                             <h3>Super Equipado</h3>
                             <p>Te invitamos a descubrir un espacio totalmente equipado para cualquier tipo de ejercicio.</p>
                         </div>

@@ -36,22 +36,17 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-    
                     span {
                         text-align: center;
-                        color: v.$negro;
                         font-weight: bold;
                     }
-                    &:nth-child(1):hover svg {
-                        fill: v.$azul;
+                    i svg{
+                        font-size: 4.5rem;
                     }
-                    &:nth-child(1):hover span {
+                    &:nth-child(1) span {
                         color: v.$azul;
                     }
-                    &:nth-child(2):hover svg {
-                        fill: lightgreen;
-                    }
-                    &:nth-child(2):hover span {
+                    &:nth-child(2) i, span {
                         color: green;
                     }
                 }
@@ -62,8 +57,16 @@
                 font-weight: 500;
                 font-size: 2.5rem;
                 font-weight: 800;
+                color: v.$blanco;
+                text-shadow: 0 0 5px black;
+                i svg{
+                    filter: drop-shadow(0 0 3px black);
+                    font-size: 3.5rem;
+                }
             }
             .rights {
+                text-shadow: none;
+                color: #333;
                 margin-top: 5rem;
                 margin-bottom: 0;
                 font-size: 1.5rem;

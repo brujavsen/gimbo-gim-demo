@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import {Link, animateScroll as scroll} from 'react-scroll';
+import { BiDumbbell} from "react-icons/bi";
 
 const Header = () => {
     const [activeBtn, setActiveBtn] = useState(false);
@@ -35,14 +36,12 @@ const Header = () => {
                         <source srcSet='/logo.webp' type='image/webp' />
                         <img loading='lazy' src="/logo.png" alt="logotipo" />
                     </picture>
-                    <a href='https://gimbo-api.vercel.app/' rel='noreferrer'>Nuestra App</a>
-                </div>
-                <div>
+                    {/* <a href='https://gimbo-api.vercel.app/' rel='noreferrer'>Nuestra App</a> */}
                 </div>
                 <div className="header__title">
                     <h1>Gimnasio Gimbo</h1>
                     <div className="wrapper">
-                        <span className="first-text shake-horizontal">&#128170; <em>¡Consulten Promos!</em></span>
+                        <span className="first-text shake-horizontal"><BiDumbbell/> <em>¡Consulten Promos!</em></span>
                     </div>
                     <a href="#contacto">Contacto</a>
                 </div>

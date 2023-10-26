@@ -7,20 +7,20 @@
     margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 50px v.$azul;
     @include m.desktopXL {
         padding: 3rem;
     }
 
     h2 {
         font-size: 3rem;
-        background-color: none;
         color: v.$blanco;
         margin: 0 auto 2rem auto;
         width: fit-content;
         height: fit-content;
         text-align: center;
         writing-mode: horizontal-tb;
-        
+
         @include m.tablet {
             font-size: 5rem;
         }
