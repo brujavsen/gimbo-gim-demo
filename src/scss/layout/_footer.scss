@@ -39,9 +39,16 @@
                     span {
                         text-align: center;
                         font-weight: bold;
+                        font-size: 1.7rem;
+                        @include m.tablet {
+                            font-size: 2.3rem;
+                        }
                     }
                     i svg{
                         font-size: 4.5rem;
+                        @include m.tablet {
+                            font-size: 7rem;
+                        }
                     }
                     &:nth-child(1) span {
                         color: v.$azul;
@@ -54,14 +61,19 @@
             p {
                 text-align: center;
                 margin: 2rem 1rem;
-                font-weight: 500;
-                font-size: 2.5rem;
                 font-weight: 800;
+                font-size: 2.5rem;
                 color: v.$blanco;
                 text-shadow: 0 0 5px black;
+                @include m.tablet {
+                    font-size: 3rem;
+                }
                 i svg{
                     filter: drop-shadow(0 0 3px black);
-                    font-size: 3.5rem;
+                    font-size: 3rem;
+                    @include m.tablet {
+                        font-size: 4rem;
+                    }
                 }
             }
             .rights {
