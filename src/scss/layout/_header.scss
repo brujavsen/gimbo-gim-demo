@@ -69,13 +69,14 @@
             align-items: center;
             
             h1 {
-                color: v.$blanco;
-                padding: .5rem;
-                border-radius: 10%;
                 font-size: 5rem;
                 text-align: center;
                 text-transform: uppercase;
                 font-family: v.$fuente-secundaria;
+                background: linear-gradient(rgb(245, 245, 245) 30%,red);
+                -webkit-background-clip: text;
+                color: transparent;
+
             }
             .wrapper {
                 display: flex;
