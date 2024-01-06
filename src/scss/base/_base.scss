@@ -76,7 +76,9 @@ button {
     margin: auto;
     animation:shake-vertical 20s linear infinite, colorchange 5s alternate infinite;
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
-    stroke: v.$rojo;
+    stroke: v.$blanco;
+    background-color: v.$rojo;
+    border-radius: 20%;
 
     @include m.tablet {
         top: 94vh;

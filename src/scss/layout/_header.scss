@@ -7,6 +7,12 @@
 .no-webp .header {
     background-image: url('/hero.jpg');
 }
+.webp .header__cnt .navidad{
+    background-image: url('/navidad.webp');
+}
+.no-webp .header__cnt .navidad {
+    background-image: url('/navidad.png');
+}
 .header {
     background-size: cover;
     background-position: center;
@@ -122,9 +128,9 @@
             bottom: -50px;
             width: 100%;
             height: 100px;
-            background-image: url("/navidad.png");
             background-position: center;
             background-size: contain;
+            background-repeat: repeat-x;
         }
     }
 }
