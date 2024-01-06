@@ -36,7 +36,7 @@ const Header = () => {
                         <source srcSet='/logo.webp' type='image/webp' />
                         <img loading='lazy' src="/logo.png" alt="logotipo" />
                     </picture>
-                    {/* <a href='https://gimbo-api.vercel.app/' rel='noreferrer'>Nuestra App</a> */}
+                    <img className='gorro' src="/navidad-gorro.png" alt="gorro navidad" />
                 </div>
                 <div className="header__title">
                     <h1>Gimnasio Gimbo</h1>
@@ -45,6 +45,7 @@ const Header = () => {
                     </div>
                     <a href="#contacto">Contacto</a>
                 </div>
+                <div className='navidad'></div>
             </div>
             <Link activeClass="arrow-down-cnt" to="offered" spy={true} smooth={true} offset={-10} duration={800}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="arrow-down">

@@ -12,7 +12,7 @@
     background-position: center;
     background-repeat: none;
     height: 800px;
-    box-shadow: 0 40px 50px v.$azul;
+    // box-shadow: 0 10px 20px v.$azul;
 
     @include m.tablet {
         height: 700px;
@@ -34,6 +34,18 @@
             justify-content: center;
             align-items: center;
             gap: 2rem;
+            position: relative;
+            // Retirar después de navidad
+            .gorro {
+                position: absolute;
+                top: -150px;
+                left: -50px;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 150px;
+                height: 100px;
+            }
             img {
                 width: 150px;
                 height: 150px;
@@ -49,8 +61,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            
             h1 {
                 color: v.$blanco;
+                padding: .5rem;
+                border-radius: 10%;
                 font-size: 5rem;
                 text-align: center;
                 text-transform: uppercase;
@@ -99,6 +114,17 @@
                     font-size: 2.5rem;
                 }
             }
+
+        }
+        // Retirar después de navidad
+        .navidad {
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            height: 100px;
+            background-image: url("/navidad.png");
+            background-position: center;
+            background-size: contain;
         }
     }
 }
