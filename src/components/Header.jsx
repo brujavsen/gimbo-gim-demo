@@ -38,7 +38,7 @@ const Header = () => {
                     </picture>
                     <picture>
                         <source srcSet='/navidad-gorro.webp' type='image/webp' />
-                        <img className='gorro' src="/navidad-gorro.png" alt="gorro navidad" />
+                        <img loading='lazy' className='gorro' src="/navidad-gorro.png" alt="gorro navidad" />
                     </picture>
                 </div>
                 <div className="header__title">
