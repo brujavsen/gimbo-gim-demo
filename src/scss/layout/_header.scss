@@ -21,7 +21,7 @@
     // box-shadow: 0 10px 20px v.$azul;
 
     @include m.tablet {
-        height: 700px;
+        height: 800px;
     }
 
     .header__cnt {
@@ -80,22 +80,32 @@
             }
             .wrapper {
                 display: flex;
+                flex-direction: column;
                 .first-text {
                     text-align: center;
                     font-size: 2.5rem;
-                    margin: 20px 0 50px 0;
+                    margin: 2rem 0;
                     color: v.$amarillo;
                     em {
-                        background-color: #00000068;
                         font-weight: bold;
-                        color: v.$amarillo;
-                        animation: colorful 6s infinite;
+                        color: v.$blanco;
                     }
 
                     @include m.tablet {
                         font-size: 3rem;
                     }
                 }
+            }
+            .promo {
+                color: v.$blanco;
+                text-align: center;
+                background-color: v.$rojo;
+                font-weight: 700;
+                width: 100%;
+                margin-bottom: 3rem;
+                animation: colorful 6s infinite;
+                border: 2px solid v.$rojo;
+                border-radius: 5px;
             }
             a {
                 border: 3px solid v.$amarillo;

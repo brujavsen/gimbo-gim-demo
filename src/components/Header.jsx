@@ -46,6 +46,7 @@ const Header = () => {
                     <div className="wrapper">
                         <span className="first-text shake-horizontal"><BiDumbbell/> <em>¡Consulten Promos!</em></span>
                     </div>
+                    <p className='promo'>3 meses con 25% de descuento</p>
                     <a href="#contacto">Contacto</a>
                 </div>
                 <div className='navidad'></div>
