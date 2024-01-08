@@ -1,0 +1,46 @@
+--index.html > <head>--
+<!-- Retirar después de navidad -->
+<script defer src="https://app.embed.im/snow.js"></script>
+
+--Header.jsx > className="header__image"--
+
+{/* Retirar después de navidad */}
+<picture>
+  <source srcSet='/navidad-gorro.webp' type='image/webp' />
+  <img loading='lazy' className='gorro' src="/navidad-gorro.png" alt="gorro navidad" />
+</picture>
+
+--_header.scss--
+
+//Retirar después de navidad
+// .webp .header__cnt .navidad{
+//     background-image: url('/navidad.webp');
+// }
+// .no-webp .header__cnt .navidad {
+//     background-image: url('/navidad.png');
+// }
+
+--.header__image--
+// Retirar después de navidad
+// .gorro {
+//     position: absolute;
+//     top: -180px;
+//     left: -50px;
+//     right: 0;
+//     bottom: 0;
+//     margin: auto;
+//     width: 120px;
+//     height: 80px;
+// }
+
+--.header__cnt--
+// Retirar después de navidad
+// .navidad {
+//     position: absolute;
+//     bottom: -50px;
+//     width: 100%;
+//     height: 100px;
+//     background-position: center;
+//     background-size: contain;
+//     background-repeat: repeat-x;
+// }

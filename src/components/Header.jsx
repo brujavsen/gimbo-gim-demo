@@ -36,10 +36,6 @@ const Header = () => {
                         <source srcSet='/logo.webp' type='image/webp' />
                         <img loading='lazy' src="/logo.png" alt="logotipo" />
                     </picture>
-                    <picture>
-                        <source srcSet='/navidad-gorro.webp' type='image/webp' />
-                        <img loading='lazy' className='gorro' src="/navidad-gorro.png" alt="gorro navidad" />
-                    </picture>
                 </div>
                 <div className="header__title">
                     <h1>Gimnasio Gimbo</h1>

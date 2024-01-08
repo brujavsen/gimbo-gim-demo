@@ -7,21 +7,15 @@
 .no-webp .header {
     background-image: url('/hero.jpg');
 }
-.webp .header__cnt .navidad{
-    background-image: url('/navidad.webp');
-}
-.no-webp .header__cnt .navidad {
-    background-image: url('/navidad.png');
-}
 .header {
     background-size: cover;
     background-position: center;
     background-repeat: none;
     height: 800px;
-    // box-shadow: 0 10px 20px v.$azul;
+    box-shadow: 0 10px 20px v.$azul;
 
     @include m.tablet {
-        height: 800px;
+        height: 700px;
     }
 
     .header__cnt {
@@ -41,17 +35,6 @@
             align-items: center;
             gap: 2rem;
             position: relative;
-            // Retirar después de navidad
-            .gorro {
-                position: absolute;
-                top: -180px;
-                left: -50px;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                width: 120px;
-                height: 80px;
-            }
             img {
                 width: 150px;
                 height: 150px;
@@ -73,18 +56,16 @@
                 text-align: center;
                 text-transform: uppercase;
                 font-family: v.$fuente-secundaria;
-                background: linear-gradient(rgb(245, 245, 245) 30%,red);
-                -webkit-background-clip: text;
-                color: transparent;
-
+                color: v.$amarillo;
+                text-shadow: 0 0 10px v.$negro;
             }
             .wrapper {
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 2.5rem;
                 .first-text {
                     text-align: center;
                     font-size: 2.5rem;
-                    margin: 2rem 0;
                     color: v.$amarillo;
                     em {
                         font-weight: bold;
@@ -102,7 +83,7 @@
                 background-color: v.$rojo;
                 font-weight: 700;
                 width: 100%;
-                margin-bottom: 3rem;
+                margin-bottom: 5rem;
                 animation: colorful 6s infinite;
                 border: 2px solid v.$rojo;
                 border-radius: 5px;
@@ -132,16 +113,6 @@
                 }
             }
 
-        }
-        // Retirar después de navidad
-        .navidad {
-            position: absolute;
-            bottom: -50px;
-            width: 100%;
-            height: 100px;
-            background-position: center;
-            background-size: contain;
-            background-repeat: repeat-x;
         }
     }
 }
