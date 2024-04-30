@@ -40,7 +40,7 @@ const Header = () => {
                 <div className="header__title">
                     <h1>Gimnasio Gimbo</h1>
                     <div className="wrapper">
-                        <span className="first-text shake-horizontal"><BiDumbbell/> <em>¡Consulten Promos!</em></span>
+                        <span className="first-text shake-horizontal"><BiDumbbell/> Promo: <em>Mayo 2 x 1</em></span>
                     </div>
                     <p className='promo'>3 meses con 25% de descuento</p>
                     <a href="#contacto">Contacto</a>

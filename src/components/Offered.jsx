@@ -38,18 +38,19 @@ const Offered = () => {
                                     <img loading='lazy' src="/fitness.jpg" alt="sala-de-aparatos image" />
                                 </picture>
                                 <h3>Sala de Aparatos</h3>
-                                <ul>
-                                    <li><span>Lunes</span> de 8:00 a 13 y de 14:30 a 22 hs</li>
-                                    <li><span>Martes</span> de 8:00 a 13 y de 14:30 a 19 hs</li>
-                                    <li><span>Miércoles</span> de 8:00 a 13 y de 14:30 a 22 hs </li>
-                                    <li><span>Jueves</span> de 8:00 a 13 y de 14:30 a 19 hs </li>
-                                    <li><span>Viernes</span> de 8:00 a 13 y de 14:30 a 22 hs</li>
-                                    <li><span>Sábado</span> de 8:00 a 13:00 hs</li>
-                                </ul>
-                                
-                                <div className="card one">
-                                    <a href="#contacto" className="card__front"><span>Entrenamiento Personalizado</span></a>
+                                <div className="hours-activity">
+                                    <div className="list-hour">
+                                        <p><span>Lunes</span> <br/> de 8:00 a 13 y de 14:30 a 22 hs</p>
+                                        <p><span>Miércoles</span> <br/> de 8:00 a 13 y de 14:30 a 22 hs</p> 
+                                        <p><span>Viernes</span> <br/> de 8:00 a 13 y de 14:30 a 22 hs</p>
+                                    </div>
+                                    <div className="list-hour">
+                                        <p><span>Martes</span> <br/> de 8:00 a 13 y de 14:30 a 19 hs</p>
+                                        <p><span>Jueves</span> <br/> de 8:00 a 13 y de 14:30 a 19 hs</p>
+                                        <p><span>Sábado</span> <br/> de 8:00 a 13:00 hs</p>
+                                    </div>
                                 </div>
+                                
                             </div>
                             <div className="section activity-two">
                                 <picture>
@@ -61,15 +62,25 @@ const Offered = () => {
                                     <li className='dias'>Martes y Jueves</li>
                                     <li>19:00 hs <span>(Niños/as)</span></li>
                                     <li>20:00 hs <span>(Adolescentes y adultos)</span></li>
+                                    <a href="https://karate-tai-jitsu-web.vercel.app/" title="Sitio de Escuela de Karate">Explora nuestra <span>Propuesta Integral</span> de Karate Tai Jitsu y desbloquea un mundo de técnicas y conocimientos completos.</a>
                                 </ul>
-                                <div className="card two">
-                                    <a href="#contacto" className="card__front"><span>Clases de Defensa Personal</span></a>
-                                </div>
                             </div>
                         </section>
-                        <section className="section activity-three">
+                        <section className="activity-three">
+                            <div className="card one">
+                                <div className="card__front">
+                                    <p>Entrenamiento Personalizado</p>
+                                </div>
+                            </div>
+                            <div className="card two">
+                                <div className="card__front">
+                                    <p>Clases de Defensa Personal</p>
+                                </div>
+                            </div>
                             <div className="card three">
-                                <a href="#contacto" className="card__front"><span>Recuperación de Lesiones</span></a>
+                                <div className="card__front">
+                                    <p>Recuperación de Lesiones</p>
+                                </div>
                             </div>
                         </section>
                     </div>

@@ -21,7 +21,7 @@
     .header__cnt {
         height: 100%;
         width: 100%;
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(5px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -57,7 +57,7 @@
                 text-transform: uppercase;
                 font-family: v.$fuente-secundaria;
                 color: v.$amarillo;
-                text-shadow: 0 0 10px v.$negro;
+                text-shadow: 0 0 8px v.$amarillo;
             }
             .wrapper {
                 display: flex;
@@ -67,8 +67,8 @@
                     text-align: center;
                     font-size: 2.5rem;
                     color: v.$amarillo;
+                    font-weight: bold;
                     em {
-                        font-weight: bold;
                         color: v.$blanco;
                     }
 
@@ -78,30 +78,29 @@
                 }
             }
             .promo {
-                color: v.$blanco;
                 text-align: center;
                 background-color: v.$rojo;
                 font-weight: 700;
-                width: 100%;
-                margin-bottom: 5rem;
-                animation: colorful 6s infinite;
-                border: 2px solid v.$rojo;
+                width: fit-content;
+                padding: 0 2rem;
+                margin-bottom: 3.5rem;
+                animation: colorful 3s infinite alternate;
                 border-radius: 5px;
             }
             a {
-                border: 3px solid v.$amarillo;
+                border: 3px solid v.$azul;
                 padding: 1.5rem 5rem;
                 border-radius: 2rem 0 2rem 0;
                 font-weight: bolder;
                 text-transform: uppercase;
                 font-size: 1.6rem;
-                color: v.$amarillo;
+                color: v.$blanco;
                 cursor: pointer;
                 transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+                background-color: v.$azul;
                 &:hover {
                     border-radius: 0 2rem 0 2rem;
-                    color: v.$negro;
-                    background-color: v.$amarillo;
+                    box-shadow: 0 0 20px v.$blanco;
                 }
             }
             @include m.desktop {
@@ -117,4 +116,7 @@
     }
 }
 
-@keyframes colorful {100%{filter: hue-rotate(360deg);}}
+@keyframes colorful {
+    0%{ background-color: v.$azul; color: v.$blanco;}
+    100%{ background-color: v.$amarillo; color: v.$negro;}
+}
