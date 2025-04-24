@@ -40,14 +40,14 @@ const Offered = () => {
                                 <h3>Sala de Aparatos</h3>
                                 <div className="hours-activity">
                                     <div className="list-hour">
-                                        <p><span>Lunes</span> <br/> de 8:00 a 13 y de 14:30 a 22 hs</p>
-                                        <p><span>Miércoles</span> <br/> de 8:00 a 13 y de 14:30 a 22 hs</p> 
-                                        <p><span>Viernes</span> <br/> de 8:00 a 13 y de 14:30 a 22 hs</p>
+                                        <p><span>Lunes</span> <br/> de 8 a 13 y de 15 a 22 hs</p>
+                                        <p><span>Miércoles</span> <br/> de 8 a 13 y 15 a 22 hs</p> 
+                                        <p><span>Viernes</span> <br/> de 8 a 13 y de 15 a 22 hs</p>
                                     </div>
                                     <div className="list-hour">
-                                        <p><span>Martes</span> <br/> de 8:00 a 13 y de 14:30 a 19 hs</p>
-                                        <p><span>Jueves</span> <br/> de 8:00 a 13 y de 14:30 a 19 hs</p>
-                                        <p><span>Sábado</span> <br/> de 8:00 a 13:00 hs</p>
+                                        <p><span>Martes</span> <br/> de 8 a 13 y de 15 a 19 hs</p>
+                                        <p><span>Jueves</span> <br/> de 8 a 13 y de 15 a 19 hs</p>
+                                        <p><span>Sábado</span> <br/> de 8 a 13:00 hs</p>
                                     </div>
                                 </div>
                                 
