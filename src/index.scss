@@ -7,8 +7,9 @@
 @use './scss/base/normalize';
 
 // Layout
-@use './scss/layout/header';
+@use './scss/layout/navbar';
+@use './scss/layout/hero';
 @use './scss/layout/offered';
 @use './scss/layout/galery';
-@use './scss/layout/hero';
+@use './scss/layout/location';
 @use './scss/layout/footer';

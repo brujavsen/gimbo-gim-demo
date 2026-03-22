@@ -1,274 +1,252 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
-
-// Modernizr Webp Images Cards
-.webp .one {
-    background-image: url('/card-1.webp');
-}
-.no-webp .one {
-    background-image: url('/card-1.jpg');
-}
-.webp .two {
-    background-image: url('/card-3.webp');
-}
-.no-webp .two {
-    background-image: url('/card-3.jpg');
-}
-.webp .three {
-    background-image: url('/card-2.webp');
-}
-.no-webp .three {
-    background-image: url('/card-2.jpg');
-}
-
-
-// Offered Styles
 .offered {
-    margin: 25rem 0 0 0;
-    margin-bottom: 10rem;
-    
-    @include m.tablet {
-        margin: 35rem 0 0 0;
-    }
-    .offered__cnt {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 95%;
+    padding: 8rem 0;
+    background-color: v.$blanco; // Clean minimalist background
+    color: v.$negro;
+
+    &__cnt {
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 0 2rem;
+    }
 
-        h2 {
-            font-size: 2.3rem;
+    // Features Section
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-bottom: 10rem;
+
+        @include m.tablet {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
         }
 
-        hr {
-            width: 90%;
-            margin: 5rem 0;
-            border: 3px dashed v.$azul;
-            @include m.tablet {
-                margin: 10rem 0;
-            }
-        }
+        .feature-card {
+            background: #ffffff;
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
 
-        @include m.desktopXL {
-            width: 80%;
-
-            h2 {
-                font-size: 3.5rem;
-            }
-        }
-
-        .offered__flex {
-            display: flex;
-            flex-direction: column;
-            gap: .5rem;
-            margin: 5rem 0 0 0;
-            
-            @include m.desktop {
-                gap: 10rem;
-                flex-direction: row;
-            }
-
-            .flex__child {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                font-size: 5rem;
-                color: v.$azul;
-                h3 {
-                    text-align: center;
+                height: 4px;
+                background: linear-gradient(90deg, v.$azul, v.$amarillo);
+                transform: scaleX(0);
+                transition: transform 0.4s ease;
+                transform-origin: left;
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+
+                &::before {
+                    transform: scaleX(1);
+                }
+
+                .feature-icon {
                     color: v.$azul;
-                    font-size: 2.5rem;
-                    margin: 2rem 0;
-                    font-weight: 700;
-                }
-                p {
-                    text-align: center;
-                    font-size: 1.7rem;
-                    font-weight: 300;
-                }
-                @include m.desktopXL {
-                    h3 {
-                        text-align: center;
-                        font-size: 2.8rem;
-                    }
-                    p {
-                        text-align: center;
-                        font-size: 2rem;
-                    }
-                }
-            }
-        }
-            
-        .offered_service {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 6rem;
-            width: 100%;
-            h2 {
-                font-size: 2.5rem;
-            }
-            @include m.desktopXL {
-                h2 {
-                    font-size: 3.5rem;
+                    transform: scale(1.1);
                 }
             }
 
-            .activity-flex {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 5rem;
+            .feature-icon {
+                font-size: 6rem;
+                color: v.$gris;
+                margin-bottom: 2rem;
+                transition: all 0.3s ease;
+            }
+
+            h3 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+                font-weight: 700;
+                color: v.$negro;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: v.$gris;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    // Activities Section
+    .activities-section {
+        .section-header {
+            text-align: center;
+            margin-bottom: 6rem;
+
+            h2 {
+                font-family: v.$fuente-secundaria;
+                font-size: 3.5rem;
+                color: v.$negro;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
                 @include m.tablet {
-                    flex-direction: row;
-                    gap: 4rem;
+                    font-size: 4.5rem;
                 }
             }
-            .section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 100%;
-                margin: 0 2rem;
-                border-radius: 2rem;
-                picture img {
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 1.5rem 1.5rem 0 0;
+
+            p {
+                font-size: 1.8rem;
+                color: v.$gris;
+            }
+        }
+    }
+
+    .activities-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        margin-bottom: 8rem;
+
+        @include m.desktop {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .activity-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+
+                .activity-card__image img {
+                    transform: scale(1.05);
                 }
-                h3 {
-                    font-size: 2rem;
-                    text-align: center;
-                    margin: 2rem auto;
-                    font-weight: 700;
-                    @include m.desktop {
-                        font-size: 2.8rem;
-                    }
-                }
-                ul {
-                    padding: 0 2rem;
-                    margin: 3rem 0;
-                    line-height: 2;
-                    font-size: 1.3rem;
-                    li {
-                        list-style: none;
-                    }
-                    & .dias {
-                        font-weight: 800;
-                        text-transform: uppercase;
-                        color: v.$amarillo;
-                    }
-                    li > span {
-                        text-transform: uppercase;
-                        font-weight: 800;
-                    }
-                    @include m.desktopXL {
-                        & {
-                            font-size: 2rem;
-                        }
-                    }
-                    a {
-                        color: v.$blanco;
-                        font-weight: 700;
-                        span {
-                            padding: .2rem;
-                            border-radius: .5rem;
-                            color: v.$azul;
-                            background-color: v.$amarillo;
-                        }
-                    }
-                }
+            }
+
+            &__image {
+                height: 300px;
+                overflow: hidden;
+
                 img {
                     width: 100%;
-                    filter: grayscale(100);
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
                 }
             }
-            .hours-activity {
-                display: flex;
-                justify-content: center;
-                margin: 3rem 0;
-                padding: 0 1.5rem;
-                gap: 2rem;
-                p {
-                    font-size: 1.3rem;
-                    span {
-                        text-transform: uppercase;
-                        font-weight: 800;
-                    }
-                    @include m.desktopXL {
-                        & {
-                            font-size: 1.8rem;
-                        }
-                    }
-                }
-                .list-hour:nth-child(odd) {
-                    color: v.$amarillo;
-                }
-            }
-            .activity-one {
-                width: fit-content;
-                height: 100%;
-                background: v.$azul;
-                color: v.$blanco;
-            }
-            .activity-two {
-                width: fit-content;
-                height: 100%;
-                background: v.$azul;
-                color: v.$blanco;
-            }
-            .activity-three {
-                margin-bottom: 10rem;
-                display: flex;
-                width: 100%;
-                flex-direction: column;
-                gap: 2rem;
-                @include m.tablet {
-                    flex-direction: row;
-                }
+
+            &__content {
+                padding: 4rem;
+
                 h3 {
+                    font-size: 2.8rem;
+                    color: v.$azul;
+                    margin-bottom: 2rem;
                     font-weight: 800;
-                    width: 100%;
                 }
-                // CARDS
-                .card {
-                    margin: 5rem auto 0 auto;
-                    width: 100%;
-                    height: 300px;
-                    border: none;
-                    background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
 
-                    .card__front {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+                .schedule-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    font-size: 1.5rem;
+                    color: v.$gris;
+                    line-height: 1.6;
+
+                    @include m.tablet {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    p {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    strong {
+                        color: v.$negro;
+                        font-family: v.$fuente-principal;
+                    }
+
+                    .weekend {
+                        margin-top: 1rem;
+                        color: v.$rojo;
+                    }
+                }
+
+                .activity-card__action {
+                    margin-top: 3rem;
+                    padding-top: 3rem;
+                    border-top: 1px solid rgba(v.$gris, 0.2);
+
+                    .btn-text {
+                        color: v.$amarillo;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        display: inline-flex;
                         align-items: center;
-                        font-size: 2rem;
-                        font-weight: 600;
+                        gap: 1rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        transition: color 0.3s ease;
 
-                        @include m.desktop {
-                            font-size: 2.5rem;
+                        span {
+                            font-size: 2rem;
+                            transition: transform 0.3s ease;
                         }
 
-                        p {
-                            width: 100%;
-                            text-align: center;
-                            padding: 1rem;
-                            background-color: v.$azul;
-                            color: v.$blanco;
+                        &:hover {
+                            color: v.$azul;
+
+                            span {
+                                transform: translateX(5px);
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .special-services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+
+        .service-tag {
+            background: rgba(v.$azul, 0.05);
+            color: v.$azul;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid rgba(v.$azul, 0.1);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: v.$azul;
+                color: v.$blanco;
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(v.$azul, 0.2);
+            }
+
+            svg {
+                font-size: 2.4rem;
             }
         }
     }

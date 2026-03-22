@@ -5,6 +5,7 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,8 +16,8 @@ body {
     font-family: v.$fuente-principal;
     font-size: 1.6rem;
     scroll-behavior: smooth;
-    background: rgb(135,201,238);
-    background: linear-gradient(0deg, rgb(186, 222, 243) 0%, rgba(255,255,255,1) 100%);
+    background: rgb(73, 118, 144);
+    background: linear-gradient(0deg, rgb(186, 222, 243) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 p {
@@ -37,18 +38,22 @@ a {
 h1 {
     font-size: 4rem;
 }
+
 h2 {
     font-size: 3.6rem;
-    background-color: v.$azul;
-    color: v.$blanco;
-    border-radius: 5rem 0 5rem 0;
     padding: .8rem 0;
     text-align: center;
-    width: 100%;
-    font-weight: bold;
+    font-weight: bolder;
     text-transform: uppercase;
-    box-shadow: 0 0 10px v.$azul;
 }
+
+.hero__info>h2 {
+    width: 100%;
+    color: v.$amarillo;
+    border-bottom: 5px solid v.$amarillo;
+    border-top: 5px solid v.$amarillo;
+}
+
 h3 {
     font-size: 3rem;
 }
@@ -59,6 +64,7 @@ img {
     height: auto;
     display: block;
 }
+
 button {
     background: none;
     border: none;
@@ -67,24 +73,53 @@ button {
 //SCROLL FIRST ELEMENT
 .arrow-down {
     cursor: pointer;
-    width: 45px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 90vh;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    animation:shake-vertical 20s linear infinite, colorchange 5s alternate infinite;
+    animation: shake-vertical 20s linear infinite, colorchange 5s alternate infinite;
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
     stroke: v.$blanco;
     background-color: v.$azul;
-    border-radius: 20%;
+    border-radius: 50%;
 
     @include m.tablet {
         top: 94vh;
     }
 }
-@keyframes shake-vertical{0%,100%{transform:translateY(0)}10%,30%,50%,70%{transform:translateY(-8px)}20%,40%,60%{transform:translateY(8px)}80%{transform:translateY(6.4px)}90%{transform:translateY(-6.4px)}}
+
+@keyframes shake-vertical {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateY(-8px)
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateY(8px)
+    }
+
+    80% {
+        transform: translateY(6.4px)
+    }
+
+    90% {
+        transform: translateY(-6.4px)
+    }
+}
 
 // SCROLL TOP
 .scroll-to-top {
@@ -93,7 +128,7 @@ button {
     bottom: 30px;
     right: 30px;
     cursor: pointer;
-    background-color: v.$rojo;
+    background-color: v.$azul;
     color: v.$blanco;
     width: 40px;
     height: 40px;

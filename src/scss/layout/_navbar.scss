@@ -1,0 +1,177 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: transparent;
+    padding: 2rem 0;
+
+    &.navbar--scrolled {
+        background-color: rgba(v.$negro, 0.85);
+        backdrop-filter: blur(12px);
+        padding: 1rem 0;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+
+        img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        .navbar__brand {
+            font-family: v.$fuente-secundaria;
+            font-size: 2.2rem;
+            color: v.$blanco;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__links {
+        display: none;
+        gap: 3rem;
+        color: v.$amarillo;
+
+        @include m.desktop {
+            display: flex;
+        }
+
+        a {
+            color: v.$blanco;
+            font-size: 1.6rem;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: v.$amarillo;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: v.$amarillo;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        display: none;
+
+        @include m.tablet {
+            display: inline-block;
+        }
+    }
+}
+
+// Global button styles
+.btn-primary {
+    background-color: v.$azul;
+    color: v.$blanco;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid v.$azul;
+    text-align: center;
+
+    &:hover {
+        background-color: transparent;
+        color: v.$azul;
+        box-shadow: 0 0 20px rgba(v.$azul, 0.4);
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: v.$blanco;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid v.$blanco;
+    text-align: center;
+
+    &:hover {
+        background-color: v.$blanco;
+        color: v.$negro;
+        box-shadow: 0 0 20px rgba(v.$blanco, 0.4);
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: v.$azul;
+    color: v.$blanco;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: v.$amarillo;
+        color: v.$negro;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+}
