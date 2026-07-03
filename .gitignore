@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Archivos temporales de Vite
+vite.config.js.timestamp-*
+vite.config.js.timestamp-*.mjs
+
+# Archivos de respaldo y logs locales
+config-version-christmas.txt
+version-7.2.txt
+lint_output.txt

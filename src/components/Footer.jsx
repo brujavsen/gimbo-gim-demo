@@ -13,15 +13,15 @@ const Footer = () => {
                 <div className="footer__contact">
                     <div className="footer__icons">
                         <a href={fbUrl} target="_blank" rel="noreferrer" aria-label="Facebook">
-                            <i><BiLogoFacebookCircle/></i>
+                            <i><BiLogoFacebookCircle /></i>
                             <span>Facebook</span>
                         </a>
                         <a href={wppUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                            <i><BiLogoWhatsapp/></i>
+                            <i><BiLogoWhatsapp /></i>
                             <span>WhatsApp</span>
                         </a>
                     </div>
-                    <p><i><BiPhone/></i> 22965274</p>
+                    <p><i><BiPhone /></i> 22965274</p>
                     <p className="rights">&copy; {year} Gimnasio Gimbo. Todos los derechos reservados.</p>
                 </div>
             </div>
